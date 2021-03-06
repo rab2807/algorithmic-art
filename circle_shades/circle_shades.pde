@@ -17,6 +17,7 @@ void draw()
 {
 }
 
+// add n layers of straight line of height h, gradually decreasing the value of h and the alpha of the color. Noise is used to make the fading smooth.
 void shade(float r, float angle, float h, int n, color c)
 {
   for (int i = 0; i<n; i++) {
@@ -27,6 +28,8 @@ void shade(float r, float angle, float h, int n, color c)
   xf+=.01;
 }
 
+// pick a random angle amount and apply shade to it, after the angle is reached, again pick an angle and skip it. Alternate between shading and not shading.
+// after a full circle, get e new larger radius and repeat
 void drawCircle()
 {
   for (int i=0; i<7; i++) {
@@ -48,6 +51,7 @@ void drawCircle()
   }
 }
 
+// comment out to try a different color
 //color pickColor()
 //{
 //  float x = random(99);
@@ -59,6 +63,7 @@ void drawCircle()
 //    return color(65, 23, 60);
 //}
 
+// used triad color theory
 color pickColor()
 {
   float x = random(99);
